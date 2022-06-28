@@ -1,7 +1,7 @@
 <script type="ts">
 	export let padding: 'small' | 'medium' | 'large' = 'medium';
-	export let noTopPadding: Boolean = false;
-	export let noBottomPadding: Boolean = false;
+	export let noTopPadding = false;
+	export let noBottomPadding = false;
 </script>
 
 <section class={padding} class:noTopPadding class:noBottomPadding>
