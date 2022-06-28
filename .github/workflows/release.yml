@@ -2,7 +2,7 @@ name: '🚀 release'
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   release:
@@ -17,7 +17,6 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org
       - name: 🚀 publish
-        run: npm ci
         run: npm run semantic-release
         working-directory: package
         env:
