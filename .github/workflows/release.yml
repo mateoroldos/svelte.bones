@@ -19,8 +19,7 @@ jobs:
       - run: npm ci
       - name: 🚀 publish
         run: npm run semantic-release
-        with:
-          working_directory: ./package
+        working_directory: ./package
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
