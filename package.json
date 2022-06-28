@@ -38,6 +38,6 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mateoroldos/svelte.bones/package.git"
+		"url": "https://github.com/mateoroldos/svelte.bones.git"
 	}
 }
