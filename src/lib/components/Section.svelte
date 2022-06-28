@@ -10,13 +10,13 @@
 
 <style>
 	.small {
-		padding-block: var(--section-padding-small, 2rem);
+		padding-block: var(--section-padding-s, 2rem);
 	}
 	.medium {
-		padding-block: var(--section-padding-medium, 4rem);
+		padding-block: var(--section-padding-m, 4rem);
 	}
 	.large {
-		padding-block: var(--section-padding-large, 6rem);
+		padding-block: var(--section-padding-m, 6rem);
 	}
 	.noTopPadding {
 		padding-block-start: 0;

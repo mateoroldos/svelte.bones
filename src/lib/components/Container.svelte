@@ -7,19 +7,16 @@
 </div>
 
 <style>
-	.full {
-		width: 90%;
-	}
-	.large {
-		width: min(var(--max-width-percent, 90%), var(--container-large, 85rem));
+	.small {
+		width: min(var(--container-width-porcentage, 90%), var(--container-s, 50rem));
 	}
 	.medium {
-		width: min(var(--max-width-percent, 90%), var(--container-large, 75rem));
+		width: min(var(--container-width-porcentage, 90%), var(--container-m, 75rem));
 	}
-	.small {
-		width: min(var(--max-width-percent, 90%), var(--container-large, 50rem));
+	.large {
+		width: min(var(--container-width-porcentage, 90%), var(--container-l, 85rem));
 	}
-	div {
-		background-color: rgb(145, 145, 218);
+	.full {
+		width: 90%;
 	}
 </style>

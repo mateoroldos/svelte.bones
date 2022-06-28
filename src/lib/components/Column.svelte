@@ -20,12 +20,12 @@
 		flex-direction: column;
 	}
 	.small {
-		gap: var(--gap-small, 2rem);
+		gap: var(--gap-s, 2rem);
 	}
 	.medium {
-		gap: var(--gap-medium, 4rem);
+		gap: var(--gap-m, 4rem);
 	}
 	.large {
-		gap: var(--gap-large, 6rem);
+		gap: var(--gap-l, 6rem);
 	}
 </style>
