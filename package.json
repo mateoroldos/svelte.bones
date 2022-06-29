@@ -1,6 +1,6 @@
 {
 	"name": "@mateoroldos/svelte.bones",
-	"version": "0.0.0-development",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -10,8 +10,7 @@
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. .",
-		"semantic-release": "semantic-release"
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"exports": {
 		".": "./index.ts"
@@ -32,12 +31,7 @@
 		"svelte-preprocess": "^4.10.6",
 		"svelte2tsx": "^0.5.11",
 		"tslib": "^2.3.1",
-		"typescript": "^4.7.2",
-		"semantic-release": "^19.0.3"
+		"typescript": "^4.7.2"
 	},
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mateoroldos/svelte.bones.git"
-	}
+	"type": "module"
 }
