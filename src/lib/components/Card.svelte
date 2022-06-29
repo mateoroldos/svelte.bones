@@ -11,9 +11,9 @@
 		padding-block: var(--card-padding-s, 2rem);
 	}
 	.medium {
-		padding-block: var(--section-padding-m, 4rem);
+		padding-block: var(--card-padding-m, 4rem);
 	}
 	.large {
-		padding-block: var(--section-padding-l, 6rem);
+		padding-block: var(--card-padding-l, 6rem);
 	}
 </style>
