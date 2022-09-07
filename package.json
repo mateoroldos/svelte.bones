@@ -1,6 +1,6 @@
 {
 	"name": "@mateoroldos/svelte.bones",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -13,7 +13,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"exports": {
-		".": "./index.ts"
+		".": "./index.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
