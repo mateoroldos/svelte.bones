@@ -7,6 +7,9 @@
 </div>
 
 <style>
+	div {
+		margin-inline: auto;
+	}
 	.small {
 		width: min(var(--container-width-porcentage, 90%), var(--container-s, 50rem));
 	}
