@@ -9,25 +9,25 @@
 
 <style>
 	.padding-top-small {
-		padding-block-start: var(--section-padding-s, 2rem);
+		padding-block-start: var(--bones-section-padding-s, 2rem);
 	}
 	.padding-top-medium {
-		padding-block-start: var(--section-padding-m, 4rem);
+		padding-block-start: var(--bones-section-padding-m, 4rem);
 	}
 	.padding-top-large {
-		padding-block-start: var(--section-padding-m, 6rem);
+		padding-block-start: var(--bones-section-padding-m, 6rem);
 	}
 	.padding-top-none {
 		padding-block-start: 0;
 	}
 	.padding-bottom-small {
-		padding-block-end: var(--section-padding-s, 2rem);
+		padding-block-end: var(--bones-section-padding-s, 2rem);
 	}
 	.padding-bottom-medium {
-		padding-block-end: var(--section-padding-m, 4rem);
+		padding-block-end: var(--bones-section-padding-m, 4rem);
 	}
 	.padding-bottom-large {
-		padding-block-end: var(--section-padding-m, 6rem);
+		padding-block-end: var(--bones-section-padding-m, 6rem);
 	}
 	.padding-bottom-none {
 		padding-block-end: 0;

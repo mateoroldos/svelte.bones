@@ -8,12 +8,12 @@
 
 <style>
 	.small {
-		padding-block: var(--card-padding-s, 2rem);
+		padding-block: var(--bones-card-padding-s, 2rem);
 	}
 	.medium {
-		padding-block: var(--card-padding-m, 4rem);
+		padding-block: var(--bones-card-padding-m, 4rem);
 	}
 	.large {
-		padding-block: var(--card-padding-l, 6rem);
+		padding-block: var(--bones-card-padding-l, 6rem);
 	}
 </style>
