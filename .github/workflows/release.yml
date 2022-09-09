@@ -20,7 +20,6 @@ jobs:
       - run: npm run package
 
       - name: conventional Changelog Action
-        working-directory: ./package
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
@@ -28,7 +27,6 @@ jobs:
           version-file: './package.json,./package-lock.json'
 
       - name: create release
-        working-directory: ./package
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
@@ -38,6 +36,11 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+
+      # - name: prerelase
+      #   run: npm semantic-release-pre
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # - name: 🚀 publish
       #   run: npm publish
