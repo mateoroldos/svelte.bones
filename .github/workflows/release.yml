@@ -19,26 +19,27 @@ jobs:
       - run: npm install
       - run: npm run package
 
-      - name: conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.7.1
-        with:
-          github-token: ${{ secrets.CHANGELOG_RELEASE }}
-          version-file: './package.json,./package-lock.json'
+      # - name: conventional Changelog Action
+      #   id: changelog
+      #   uses: TriPSs/conventional-changelog-action@v3.7.1
+      #   with:
+      #     github-token: ${{ secrets.CHANGELOG_RELEASE }}
+      #     version-file: './package.json,./package-lock.json'
 
-      - name: create release
-        uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+      # - name: create release
+      #   uses: actions/create-release@v1
+      #   if: ${{ steps.changelog.outputs.skipped == 'false' }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   with:
+      #     tag_name: ${{ steps.changelog.outputs.tag }}
+      #     release_name: ${{ steps.changelog.outputs.tag }}
+      #     body: ${{ steps.changelog.outputs.clean_changelog }}
+
+      - name: 🚀 publish
+        run: npm run semantic-release
+        working-directory: ./package
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
-
-      # - name: 🚀 publish
-      #   run: npm publish
-      #   working-directory: ./package
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
