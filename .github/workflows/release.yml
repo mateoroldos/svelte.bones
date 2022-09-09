@@ -37,11 +37,6 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-      # - name: prerelase
-      #   run: npm semantic-release-pre
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       # - name: 🚀 publish
       #   run: npm publish
       #   working-directory: ./package
