@@ -39,7 +39,6 @@ jobs:
 
       - name: 🚀 publish
         run: npm run semantic-release
-        working-directory: ./package
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
