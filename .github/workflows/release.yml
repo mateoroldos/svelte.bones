@@ -18,8 +18,28 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm install
       - run: npm run package
-      - name: 🚀 publish
-        run: npm publish
+
+      - name: conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3.7.1
+        with:
+          github-token: ${{ secrets.CHANGELOG_RELEASE }}
+          version-file: './package.json,./package-lock.json'
+
+      - name: create release
+        uses: actions/create-release@v1
         working-directory: ./package
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+
+      # - name: 🚀 publish
+      #   run: npm publish
+      #   working-directory: ./package
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
