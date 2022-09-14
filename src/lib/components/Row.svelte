@@ -1,5 +1,5 @@
 <script type="ts">
-	export let gap: 'small' | 'medium' | 'large' = 'medium';
+	export let gap: 'small' | 'medium' | 'large' | 'none' | number = 'medium';
 	export let align: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' = 'center';
 	export let justify:
 		| 'flex-start'
@@ -10,7 +10,12 @@
 		| 'space-evenly' = 'center';
 </script>
 
-<div class={gap} style={`align-items: ${align}; justify-content: ${justify}`}>
+<div
+	class={typeof gap === 'string' ? gap : ''}
+	style={`align-items: ${align}; justify-content: ${justify}; ${
+		typeof gap === 'number' ? `gap: ${gap}rem` : ''
+	}`}
+>
 	<slot />
 </div>
 
