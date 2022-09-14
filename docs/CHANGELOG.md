@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mateoroldos/svelte.bones/compare/v1.1.0...v1.2.0) (2022-09-14)
+
+
+### Features
+
+* Custom gap and 'none' gap for Collumn and Row ([cae37f3](https://github.com/mateoroldos/svelte.bones/commit/cae37f3be7c1770e0d58fc8fcceec025192617d9))
+
 # [1.1.0](https://github.com/mateoroldos/svelte.bones/compare/v1.0.0...v1.1.0) (2022-09-09)
 
 
