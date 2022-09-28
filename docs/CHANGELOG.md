@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mateoroldos/svelte.bones/compare/v1.2.0...v1.3.0) (2022-09-28)
+
+
+### Features
+
+* Add breakpoint to Row and Column ([886c463](https://github.com/mateoroldos/svelte.bones/commit/886c4638aa28c96420896946ed5488c80a649c54))
+
 # [1.2.0](https://github.com/mateoroldos/svelte.bones/compare/v1.1.0...v1.2.0) (2022-09-14)
 
 
